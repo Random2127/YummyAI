@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:yummyai/auth/login_or_register.dart';
+
+import 'package:yummyai/theme/light_mode.dart';
 
 void main() {
   runApp(const YummyAI());
@@ -10,19 +13,8 @@ class YummyAI extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: Login(),
+      theme: lightMode,
+      home: LoginOrRegister(),
     );
-  }
-}
-
-class Login extends StatelessWidget {
-  const Login({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
