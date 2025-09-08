@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yummyai/auth/auth_service.dart';
 import 'package:yummyai/widgets/components/my_button.dart';
 import 'package:yummyai/widgets/components/my_text_field.dart';
 
@@ -9,7 +10,33 @@ class RegisterScreen extends StatelessWidget {
       TextEditingController();
 
   final Function()? onTap;
+
   RegisterScreen({super.key, required this.onTap});
+
+  void register(BuildContext context) {
+    final auth = AuthService();
+
+    // check same pw -> create user
+    if (_passwordController.text == _confirmPasswordController.text) {
+      try {
+        auth.signUpWithEmailAndPassword(
+          _emailController.text,
+          _passwordController.text,
+        );
+      } catch (e) {
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(title: Text(e.toString())),
+        );
+      }
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) =>
+            AlertDialog(title: Text("Passwords don't match!")),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +86,10 @@ class RegisterScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 // login button
-                MyButton(textButton: 'Register', onTap: register),
+                MyButton(
+                  textButton: 'Register',
+                  onTap: () => register(context),
+                ),
 
                 // register now
                 const SizedBox(height: 20),
@@ -91,6 +121,4 @@ class RegisterScreen extends StatelessWidget {
       ),
     );
   }
-
-  void register() {}
 }

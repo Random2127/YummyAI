@@ -26,8 +26,6 @@ class LoginScreen extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(title: Text(e.toString())),
-
-        //MINUTE 23
       );
     }
 

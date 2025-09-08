@@ -16,6 +16,7 @@ class YummyAI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightMode,
       home: const AuthGate(),
