@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yummyai/auth/auth_service.dart';
 import 'package:yummyai/widgets/components/my_button.dart';
 import 'package:yummyai/widgets/components/my_text_field.dart';
 
@@ -7,7 +8,31 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController _passwordController = TextEditingController();
 
   final Function()? onTap;
+
   LoginScreen({super.key, required this.onTap});
+
+  void login(BuildContext context) async {
+    // need to add context for dialogBox
+
+    // auth service
+    final authService = AuthService();
+    // Try login
+    try {
+      await authService.signInWithEmailAndPassword(
+        _emailController.text,
+        _passwordController.text,
+      );
+    } catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(title: Text(e.toString())),
+
+        //MINUTE 23
+      );
+    }
+
+    // errors
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +70,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 20),
 
             // login button
-            MyButton(textButton: 'Login', onTap: login),
+            MyButton(textButton: 'Login', onTap: () => login(context)),
 
             // register now
             const SizedBox(height: 20),
@@ -75,6 +100,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
-  void login() {}
 }
