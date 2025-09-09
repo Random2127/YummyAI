@@ -22,14 +22,14 @@ class LoginScreen extends StatelessWidget {
         _emailController.text,
         _passwordController.text,
       );
-    } catch (e) {
+    }
+    // errors
+    catch (e) {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(title: Text(e.toString())),
       );
     }
-
-    // errors
   }
 
   @override

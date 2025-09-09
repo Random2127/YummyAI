@@ -10,7 +10,7 @@ class LoginOrRegister extends StatefulWidget {
 }
 
 class _LoginOrRegisterState extends State<LoginOrRegister> {
-  bool showLoginScreen = true;
+  bool showLoginScreen = true; // Login default
 
   void toggleScreens() {
     setState(() {

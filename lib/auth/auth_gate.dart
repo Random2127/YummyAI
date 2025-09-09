@@ -11,6 +11,7 @@ class AuthGate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
+        // Listen to auth changes
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           //user is logged in
