@@ -14,14 +14,15 @@ It uses AI to suggest recipes, adapt ingredients, and create meal plans tailored
 ---
 
 ## 📸 Screenshots
-*(Coming soon — UI previews as the project grows)*  
+*(Coming soon)*  
 
 ---
 
 ## 🛠️ Tech Stack
 - **Flutter & Dart** – mobile framework  
 - **Firebase** – backend services (auth, database, hosting)  
-- **AI API (Hugging Face / custom)** – recipe personalization  
+- **AI API GEMINI**
+- **Future (Hugging Face / custom)** – recipe personalization  
 
 ---
 
