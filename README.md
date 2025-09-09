@@ -1,16 +1,36 @@
-# yummyai
+# 🍲 YummyAI
 
-A new Flutter project.
+**YummyAI** is a Flutter app that builds a **personalized cookbook**.  
+It uses AI to suggest recipes, adapt ingredients, and create meal plans tailored to user preferences.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
+- Flutter mobile app (Android/iOS ready)  
+- Recipe browsing and favorites  
+- AI-powered recipe suggestions (via Hugging Face / other API)  
+- Clean and simple UI  
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📸 Screenshots
+*(Coming soon — UI previews as the project grows)*  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠️ Tech Stack
+- **Flutter & Dart** – mobile framework  
+- **Firebase** – backend services (auth, database, hosting)  
+- **AI API (Hugging Face / custom)** – recipe personalization  
+
+---
+
+## 📌 Status
+This is a **work in progress** – my first full Flutter + AI project.  
+Goal: ship a public MVP to the Play Store/App Store.  
+
+---
+
+## 📫 Contact
+Made by [Victor Medina](https://github.com/Random2127)  
+Email: vmedina1978@gmail.com | Discord: skax78
