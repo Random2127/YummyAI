@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/auth/auth_service.dart';
+import 'package:yummyai/core/auth/auth_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

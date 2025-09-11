@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 ThemeData lightMode = ThemeData(
   colorScheme: ColorScheme(
     brightness: Brightness.light,
-    primary: const Color(0xFFC85121), // A deep, warm terracotta orange
+    primary: const Color(0xFFD86B2A),
     onPrimary: Colors.white,
-    secondary: const Color(0xFFF0E6D8), // A creamy off-white, like a latte
-    onSecondary: const Color(0xFF4A4E54), // A dark, subtle grey-brown
-    error: const Color(0xFFB00020), // A standard error red
+    secondary: const Color(0xFF8C6B4F),
+    onSecondary: Colors.white,
+    error: const Color(0xFFD32F2F),
     onError: Colors.white,
-    surface: const Color(0xFFF9F7F4), // A light, warm off-white for backgrounds
-    onSurface: const Color(0xFF4A4E54), // A dark, subtle grey-brown
+    surface: const Color(0xFFFDF9F4),
+    onSurface: const Color(0xFF3D3A36),
   ),
 );

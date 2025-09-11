@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/models/recipe.dart';
+import 'package:yummyai/domain/models/recipe.dart';
 
 class RecipeCard extends StatelessWidget {
   final Recipe recipe;

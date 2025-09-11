@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:yummyai/auth/auth_gate.dart';
+import 'package:yummyai/core/auth/auth_gate.dart';
 import 'package:yummyai/firebase_options.dart';
 
 import 'package:yummyai/theme/light_mode.dart';

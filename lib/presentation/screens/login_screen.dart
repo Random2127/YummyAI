@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/auth/auth_service.dart';
-import 'package:yummyai/widgets/components/my_button.dart';
-import 'package:yummyai/widgets/components/my_text_field.dart';
+import 'package:yummyai/core/auth/auth_service.dart';
+import 'package:yummyai/presentation/widgets/components/my_button.dart';
+import 'package:yummyai/presentation/widgets/components/my_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();

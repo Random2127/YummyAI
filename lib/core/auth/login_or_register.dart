@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/screens/login_screen.dart';
-import 'package:yummyai/screens/register_screen.dart';
+import 'package:yummyai/presentation/screens/login_screen.dart';
+import 'package:yummyai/presentation/screens/register_screen.dart';
 
 class LoginOrRegister extends StatefulWidget {
   const LoginOrRegister({super.key});

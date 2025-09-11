@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:yummyai/auth/login_or_register.dart';
-import 'package:yummyai/screens/home_page.dart';
+import 'package:yummyai/core/auth/login_or_register.dart';
+import 'package:yummyai/presentation/screens/home_page.dart';
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
