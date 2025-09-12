@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/core/auth/auth_service.dart';
+import 'package:yummyai/data/auth_repo_impl.dart';
 import 'package:yummyai/presentation/widgets/components/my_button.dart';
 import 'package:yummyai/presentation/widgets/components/my_text_field.dart';
 
@@ -13,16 +13,13 @@ class RegisterScreen extends StatelessWidget {
 
   RegisterScreen({super.key, required this.onTap});
 
-  void register(BuildContext context) {
-    final auth = AuthService();
+  void register(BuildContext context) async {
+    final authRepo = AuthRepoImpl();
 
     // check same pw -> create user
     if (_passwordController.text == _confirmPasswordController.text) {
       try {
-        auth.signUpWithEmailAndPassword(
-          _emailController.text,
-          _passwordController.text,
-        );
+        await authRepo.signup(_emailController.text, _passwordController.text);
       } catch (e) {
         showDialog(
           context: context,

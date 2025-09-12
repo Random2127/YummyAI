@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/core/auth/auth_service.dart';
+import 'package:yummyai/data/auth_repo_impl.dart';
 import 'package:yummyai/presentation/widgets/components/my_button.dart';
 import 'package:yummyai/presentation/widgets/components/my_text_field.dart';
 
@@ -15,13 +15,10 @@ class LoginScreen extends StatelessWidget {
     // need to add context for dialogBox
 
     // auth service
-    final authService = AuthService();
+    final authRepo = AuthRepoImpl();
     // Try login
     try {
-      await authService.signInWithEmailAndPassword(
-        _emailController.text,
-        _passwordController.text,
-      );
+      await authRepo.login(_emailController.text, _passwordController.text);
     }
     // errors
     catch (e) {

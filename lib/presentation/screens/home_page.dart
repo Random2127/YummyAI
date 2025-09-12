@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummyai/core/auth/auth_service.dart';
+import 'package:yummyai/data/auth_repo_impl.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,8 +9,8 @@ class HomePage extends StatefulWidget {
 }
 
 void logOut() {
-  final auth = AuthService();
-  auth.signOut();
+  final authRepo = AuthRepoImpl();
+  authRepo.logout();
 }
 
 class _HomePageState extends State<HomePage> {
