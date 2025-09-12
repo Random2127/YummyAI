@@ -12,16 +12,12 @@ class LoginScreen extends StatelessWidget {
   LoginScreen({super.key, required this.onTap});
 
   void login(BuildContext context) async {
-    // need to add context for dialogBox
-
     // auth service
     final authRepo = AuthRepoImpl();
     // Try login
     try {
       await authRepo.login(_emailController.text, _passwordController.text);
-    }
-    // errors
-    catch (e) {
+    } catch (e) {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(title: Text(e.toString())),
@@ -37,7 +33,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // loog
+            // logo
             Image(
               image: AssetImage('assets/pictures/healthy-bowl-frische.jpg'),
               height: 150,
