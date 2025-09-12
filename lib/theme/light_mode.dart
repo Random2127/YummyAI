@@ -9,7 +9,7 @@ ThemeData lightMode = ThemeData(
     onSecondary: Colors.white,
     error: const Color(0xFFD32F2F),
     onError: Colors.white,
-    surface: const Color(0xFFFDF9F4),
+    surface: const Color.fromARGB(255, 250, 214, 171),
     onSurface: const Color(0xFF3D3A36),
   ),
 );

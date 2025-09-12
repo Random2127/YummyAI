@@ -4,6 +4,7 @@ import 'package:yummyai/presentation/screens/add_screen.dart';
 import 'package:yummyai/presentation/screens/chat_screen.dart';
 import 'package:yummyai/presentation/screens/favourite_screen.dart';
 import 'package:yummyai/presentation/screens/param_screen.dart';
+import 'package:yummyai/presentation/widgets/custom_app_bar.dart';
 import 'package:yummyai/presentation/widgets/custom_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,11 +31,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('HomePage'),
-        backgroundColor: Colors.green,
-        actions: [IconButton(onPressed: logOut, icon: Icon(Icons.logout))],
-      ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      appBar: CustomAppBar(),
       body: _screens[_selectedIndex],
       bottomNavigationBar: CustomNavigationBar(
         currentIndex: _selectedIndex,
