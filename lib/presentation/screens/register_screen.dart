@@ -21,10 +21,12 @@ class RegisterScreen extends StatelessWidget {
       try {
         await authRepo.signup(_emailController.text, _passwordController.text);
       } catch (e) {
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(title: Text(e.toString())),
-        );
+        if (context.mounted) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(title: Text(e.toString())),
+          );
+        }
       }
     } else {
       showDialog(
